@@ -1,0 +1,498 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+
+/* PAGE */
+
+.planner-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 40px 60px;
+
+  box-sizing: border-box;
+}
+
+
+/* NAVBAR */
+
+.planner-navbar {
+
+  margin-bottom: 40px;
+}
+
+.planner-navbar h1 {
+
+  color: #1e2a8a;
+
+  font-size: 42px;
+
+  margin: 0;
+}
+
+
+/* OVERVIEW CARD */
+
+.overview-card {
+
+  background-color: white;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 20px;
+
+  padding: 40px;
+
+  margin-bottom: 35px;
+
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.04);
+}
+
+.overview-tag {
+
+  color: #1e2a8a;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 25px;
+}
+
+.overview-card h2 {
+
+  font-size: 44px;
+
+  color: #1e2a8a;
+
+  margin-bottom: 20px;
+}
+
+.overview-card p {
+
+  font-size: 22px;
+
+  line-height: 1.8;
+
+  color: #444;
+
+  max-width: 900px;
+}
+
+
+/* MAIN LAYOUT */
+
+.planner-layout {
+
+  display: flex;
+
+  gap: 30px;
+
+  align-items: flex-start;
+}
+
+
+/* LEFT PANEL */
+
+.left-panel {
+
+  flex: 2;
+}
+
+
+/* RIGHT PANEL */
+
+.right-panel {
+
+  flex: 1;
+}
+
+
+/* CARDS */
+
+.weekly-plan-card,
+.schedule-card,
+.insights-card {
+
+  background-color: white;
+
+  border-radius: 20px;
+
+  border: 1px solid #dddddd;
+
+  padding: 30px;
+
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.04);
+}
+
+
+/* WEEKLY PLAN */
+
+.weekly-plan-card {
+
+  margin-bottom: 30px;
+}
+
+.card-header {
+
+  margin-bottom: 25px;
+}
+
+.card-header h3 {
+
+  margin: 0;
+
+  font-size: 28px;
+}
+
+.week-days {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.day-box {
+
+  flex: 1;
+
+  background-color: #fafafa;
+
+  border-radius: 16px;
+
+  padding: 20px 10px;
+
+  text-align: center;
+
+  border: 1px solid #eeeeee;
+
+  transition: 0.3s ease;
+}
+
+.day-box span {
+
+  display: block;
+
+  color: #777;
+
+  font-size: 13px;
+
+  margin-bottom: 10px;
+}
+
+.day-box h4 {
+
+  margin: 0;
+
+  font-size: 28px;
+
+  color: #222;
+}
+
+.active-day {
+
+  background-color: #1e2a8a;
+}
+
+.active-day span,
+.active-day h4 {
+
+  color: white;
+}
+
+
+/* SCHEDULE */
+
+.schedule-card h3 {
+
+  margin-top: 0;
+
+  margin-bottom: 30px;
+
+  font-size: 30px;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+
+  position: relative;
+
+  padding-left: 40px;
+}
+
+.timeline::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 10px;
+
+  top: 0;
+
+  width: 2px;
+
+  height: 100%;
+
+  background-color: #d9d9d9;
+}
+
+
+/* TIMELINE ITEM */
+
+.timeline-item {
+
+  position: relative;
+
+  margin-bottom: 25px;
+}
+
+.timeline-dot {
+
+  position: absolute;
+
+  left: -38px;
+
+  top: 35px;
+
+  width: 16px;
+
+  height: 16px;
+
+  border-radius: 50%;
+
+  background-color: white;
+
+  border: 3px solid #1e2a8a;
+}
+
+
+/* TASK CONTENT */
+
+.task-content {
+
+  background-color: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 18px;
+
+  padding: 25px;
+}
+
+.active-task .task-content {
+
+  background-color: #2d3494;
+
+  color: white;
+}
+
+.task-time {
+
+  font-size: 14px;
+
+  margin-bottom: 15px;
+
+  opacity: 0.8;
+}
+
+.task-content h4 {
+
+  margin: 0;
+
+  font-size: 28px;
+
+  margin-bottom: 12px;
+}
+
+.task-content p {
+
+  margin: 0;
+
+  font-size: 18px;
+
+  opacity: 0.85;
+}
+
+
+/* FOOTER */
+
+.task-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+
+/* BADGES */
+
+.completed-badge {
+
+  background-color: #e8f9ed;
+
+  color: #00a63e;
+
+  padding: 10px 18px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+.active-badge {
+
+  background-color: rgba(255,255,255,0.2);
+
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+
+/* INSIGHTS */
+
+.insights-card h3 {
+
+  margin-top: 0;
+
+  margin-bottom: 35px;
+
+  font-size: 30px;
+}
+
+
+/* METRICS */
+
+.metric {
+
+  margin-bottom: 40px;
+}
+
+.metric-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+
+/* PROGRESS BAR */
+
+.progress-bar {
+
+  width: 100%;
+
+  height: 10px;
+
+  background-color: #e6e6e6;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+
+  height: 100%;
+
+  background-color: #1e2a8a;
+
+  border-radius: 20px;
+}
+
+.secondary-fill {
+
+  background-color: #3d7bd9;
+}
+
+.metric p {
+
+  margin: 0;
+
+  color: #666;
+
+  font-size: 15px;
+}
+
+
+/* AI TIP */
+
+.tip-box {
+
+  background-color: #f5f8ff;
+
+  border: 1px solid #d8e4ff;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  margin-top: 20px;
+}
+
+.tip-box h4 {
+
+  margin-top: 0;
+
+  color: #1e2a8a;
+
+  margin-bottom: 15px;
+}
+
+.tip-box p {
+
+  margin: 0;
+
+  line-height: 1.8;
+
+  color: #444;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1100px) {
+
+  .planner-layout {
+
+    flex-direction: column;
+  }
+
+  .right-panel {
+
+    width: 100%;
+  }
+}
