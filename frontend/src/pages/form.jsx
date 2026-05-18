@@ -3,45 +3,66 @@ import axios from "axios";
 
 import "./../styles/form.css";
 
-function Form() {
+function Form({ setStudyPlan }) {
 
   // -------------------------------------
   // State Variables
   // -------------------------------------
 
   const [subjects, setSubjects] = useState("");
-  const [hours, setHours] = useState(4);
-  const [examDate, setExamDate] = useState("");
 
-  const [studyPlan, setStudyPlan] = useState(null);
+  const [hours, setHours] = useState(4);
+
+  const [examDate, setExamDate] = useState("");
 
   const [loading, setLoading] = useState(false);
 
 
   // -------------------------------------
-  // API Call
+  // Generate Study Plan
   // -------------------------------------
 
   const generatePlan = async () => {
+
+    // Basic Validation
+
+    if (!subjects || !examDate) {
+
+      alert("Please fill all fields.");
+
+      return;
+    }
 
     try {
 
       setLoading(true);
 
+      console.log({
+        subjects: subjects,
+        hours: Number(hours),
+        exam_date: examDate
+    });
+
       const response = await axios.post(
         "http://127.0.0.1:8000/generate-plan",
         {
-          subjects: subjects,
-          hours: hours.toString(),
-          exam_date: examDate
+            subjects: subjects,
+            hours: Number(hours),
+            exam_date: examDate
         }
       );
+
+      console.log(response.data);
+
+      // Send Data To App.jsx
 
       setStudyPlan(response.data);
 
     } catch (error) {
 
       console.error(error);
+
+      alert("Failed to generate study plan.");
 
     } finally {
 
@@ -58,7 +79,10 @@ function Form() {
 
     <div className="container">
 
+
+      {/* -------------------------------- */}
       {/* Header */}
+      {/* -------------------------------- */}
 
       <div className="header">
 
@@ -73,9 +97,12 @@ function Form() {
       </div>
 
 
+      {/* -------------------------------- */}
       {/* Form Card */}
+      {/* -------------------------------- */}
 
       <div className="form-card">
+
 
         {/* Subject Input */}
 
@@ -93,7 +120,7 @@ function Form() {
         </div>
 
 
-        {/* Hours Slider */}
+        {/* Daily Study Hours */}
 
         <div className="input-group">
 
@@ -115,10 +142,15 @@ function Form() {
           />
 
           <div className="slider-labels">
+
             <span>1H</span>
+
             <span>4H</span>
+
             <span>8H</span>
+
             <span>12H</span>
+
           </div>
 
         </div>
@@ -139,7 +171,7 @@ function Form() {
         </div>
 
 
-        {/* Button */}
+        {/* Analyze Button */}
 
         <button
           className="analyze-btn"
@@ -155,15 +187,6 @@ function Form() {
         </button>
 
       </div>
-
-
-      {/* Planner Output */}
-
-      {
-        studyPlan && (
-          <Planner studyPlan={studyPlan} />
-        )
-      }
 
     </div>
   );
