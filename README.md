@@ -99,13 +99,13 @@ Planner Dashboard UI
 <h2>Home Page</h2>
 
 <p>
-  <img src="./images/home.png" width="100%" style="width: 500px; height: 400px; object-fit: cover;">
+  <img src="https://github.com/IshitaSinha2002/Study-Planner/blob/main/home.png" width="100%" style="width: 500px; height: 400px; object-fit: cover;">
 </p>
 
 <h2>Planner Dashboard</h2>
-      <img src="./images/planner1.png" style="width: 500px; height: 400px; object-fit: cover;">
-      <img src="./images/planner2.png" style="width: 500px; height: 400px; object-fit: cover;">
-      <img src="./images/planner3.png" style="width: 500px; height: 400px; object-fit: cover;">
+      <img src="https://github.com/IshitaSinha2002/Study-Planner/blob/main/planner1.png" style="width: 500px; height: 400px; object-fit: cover;">
+      <img src="https://github.com/IshitaSinha2002/Study-Planner/blob/main/planner2.png" style="width: 500px; height: 400px; object-fit: cover;">
+      <img src="https://github.com/IshitaSinha2002/Study-Planner/blob/main/planner3.png" style="width: 500px; height: 400px; object-fit: cover;">
 
 <h2>Future Improvements</h2>
 
